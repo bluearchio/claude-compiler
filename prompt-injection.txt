@@ -1,0 +1,57 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                    CLAUDE CODE MANDATORY PREPROCESSING               ║
+║                         SYSTEM INTEGRATION ACTIVE                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+🚨 CRITICAL: CLAUDE COMPILER DETECTED - ENFORCEMENT ACTIVE
+
+MANDATORY EXECUTION SEQUENCE:
+1. ✅ READ: claude-compiler/CLAUDE.md for complete requirements
+2. ✅ ANALYZE: User task using claude-compiler/task-requirements.json
+3. ✅ SELECT: Optimal agent from claude-compiler/agents/*
+4. ✅ DECIDE: Whether Claude Compiler execution required
+5. ✅ TRACK: Initialize session in task database
+6. ✅ PUBLISH: Session data per claude-compiler/session-data-format.json
+
+📊 CURRENT SYSTEM STATE:
+- Session ID: {SESSION_ID}
+- Timestamp: {TIMESTAMP}
+- Working Directory: {WORKING_DIR}
+- Available Agents: {AGENT_LIST}
+- Compiler Status: OPERATIONAL ✅
+
+🎯 TASK ANALYSIS REQUIRED:
+- Classification: {TASK_COMPLEXITY}
+- Domain: {TASK_DOMAIN} 
+- Risk Level: {RISK_LEVEL}
+- Trigger Words: {TRIGGER_WORDS}
+- Requires Compiler: {REQUIRES_COMPILER}
+
+🤖 AGENT SELECTION:
+- Selected Agent: {SELECTED_AGENT}
+- Selection Score: {SELECTION_SCORE}
+- Reasoning: {SELECTION_REASONING}
+- Agent Chain: {AGENT_CHAIN}
+
+⚠️  BEHAVIORAL ENFORCEMENT:
+- USE Claude Compiler for complex tasks (complexity >= moderate)
+- PROVIDE complete decision transparency
+- MAINTAIN full audit trail in database
+- PUBLISH session data to: claude-compiler/session-data/{SESSION_ID}.json
+- NO EXCEPTIONS - this is mathematically enforced
+
+🔐 VERIFICATION REQUIREMENTS:
+- All decisions must be logged and auditable
+- Cryptographic verification for complex operations
+- Real-time session tracking active
+- Complete transparency mandatory
+
+📋 EXECUTION COMMAND:
+{EXECUTION_COMMAND}
+
+🎯 NOW PROCESS USER REQUEST:
+```
+{USER_PROMPT}
+```
+
+END MANDATORY PREPROCESSING - PROCEED WITH ENFORCED BEHAVIOR

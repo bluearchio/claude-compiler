@@ -1,0 +1,59 @@
+{
+  "id": "test-simple-001",
+  "description": "Simple test instruction to verify compiler works",
+  "steps": [
+    {
+      "id": "step1",
+      "description": "Create test file",
+      "action": {
+        "type": "file_write",
+        "path": "test-verification.txt",
+        "content": "Step 1 completed successfully"
+      },
+      "verification": {
+        "type": "file_exists",
+        "path": "test-verification.txt"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "step2",
+      "description": "Append to test file",
+      "action": {
+        "type": "file_write",
+        "path": "test-verification.txt",
+        "content": "Step 1 completed successfully\nStep 2 completed successfully"
+      },
+      "verification": {
+        "type": "file_exists",
+        "path": "test-verification.txt"
+      },
+      "dependencies": ["step1"]
+    },
+    {
+      "id": "step3",
+      "description": "Verify file contents",
+      "action": {
+        "type": "file_read",
+        "path": "test-verification.txt"
+      },
+      "verification": {
+        "type": "contains",
+        "text": "Step 2 completed"
+      },
+      "dependencies": ["step2"]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "no_errors",
+      "description": "No errors during execution"
+    }
+  ],
+  "resources": {
+    "files": ["test-verification.txt"]
+  },
+  "verification": {
+    "type": "test_passes"
+  }
+}

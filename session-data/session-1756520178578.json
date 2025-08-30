@@ -1,0 +1,40 @@
+{
+  "sessionMetadata": {
+    "sessionId": "session-1756520178578",
+    "timestamp": "2025-08-30T02:16:18.582Z",
+    "claudeCodeVersion": "unknown",
+    "workingDirectory": "/Users/jproctor/My Drive/source/git/projects/bluearch"
+  },
+  "taskAnalysis": {
+    "userPrompt": "ensure deployment workflow coordinates testing and monitoring with comprehensive validation",
+    "classification": {
+      "complexity": "moderate",
+      "wordCount": 10,
+      "estimatedSteps": 1,
+      "riskLevel": "HIGH"
+    },
+    "triggerWords": [
+      "workflow"
+    ],
+    "domainClassification": "devops"
+  },
+  "agentSelection": {
+    "selectedAgent": "workflow-orchestrator",
+    "selectionReasoning": {
+      "domainScore": 0,
+      "complexityScore": 0,
+      "triggerScore": 0,
+      "riskScore": 0,
+      "totalScore": 39.75
+    },
+    "agentChain": [
+      "workflow-orchestrator"
+    ],
+    "alternativeAgents": []
+  },
+  "compilerDecision": {
+    "requiresCompiler": true,
+    "reason": "Strong trigger word match (8.75 points); Domain expertise in devops (6 points); Suitable for moderate complexity (25 points)",
+    "compilerMode": "tracking"
+  }
+}

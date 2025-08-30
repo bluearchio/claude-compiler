@@ -1,0 +1,63 @@
+{
+  "id": "test-instruction-001",
+  "description": "Test instruction to verify compiler enforcement",
+  "steps": [
+    {
+      "id": "step1",
+      "description": "Check if package.json exists",
+      "action": {
+        "type": "file_read",
+        "path": "package.json"
+      },
+      "verification": {
+        "type": "file_exists",
+        "path": "package.json"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "step2",
+      "description": "Run lint check",
+      "action": {
+        "type": "command",
+        "command": "npm run lint -- --quiet"
+      },
+      "verification": {
+        "type": "contains",
+        "text": ""
+      },
+      "dependencies": ["step1"]
+    },
+    {
+      "id": "step3",
+      "description": "Create test file",
+      "action": {
+        "type": "file_write",
+        "path": "test-output.txt",
+        "content": "Test successful at timestamp"
+      },
+      "verification": {
+        "type": "file_exists",
+        "path": "test-output.txt"
+      },
+      "dependencies": ["step2"]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "file_exists",
+      "path": "package.json",
+      "description": "Package.json must exist"
+    },
+    {
+      "type": "no_errors",
+      "description": "No errors during execution"
+    }
+  ],
+  "resources": {
+    "files": ["package.json", "test-output.txt"]
+  },
+  "verification": {
+    "type": "test_passes"
+  }
+}

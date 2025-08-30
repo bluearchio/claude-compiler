@@ -1,0 +1,46 @@
+{
+  "id": "test-violation-001",
+  "description": "Test instruction that will violate constraints to prove abort works",
+  "steps": [
+    {
+      "id": "step1",
+      "description": "Try to read non-existent file",
+      "action": {
+        "type": "file_read",
+        "path": "this-file-does-not-exist.txt"
+      },
+      "verification": {
+        "type": "file_exists",
+        "path": "this-file-does-not-exist.txt"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "step2",
+      "description": "This should never execute",
+      "action": {
+        "type": "file_write",
+        "path": "should-not-exist.txt",
+        "content": "This file should never be created"
+      },
+      "verification": {
+        "type": "file_exists",
+        "path": "should-not-exist.txt"
+      },
+      "dependencies": ["step1"]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "file_exists",
+      "path": "this-file-does-not-exist.txt",
+      "description": "Required file must exist (will fail)"
+    }
+  ],
+  "resources": {
+    "files": ["this-file-does-not-exist.txt"]
+  },
+  "verification": {
+    "type": "test_passes"
+  }
+}
