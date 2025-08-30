@@ -95,9 +95,13 @@ pids
 *.pid.lock
 
 # SQLite databases (exclude from repo but keep structure)
+*.db
 *.db-journal
 *.db-wal
 *.db-shm
+
+# Claude Code configuration
+.claude/
 
 # Backup files
 *.rollback-backup-*
