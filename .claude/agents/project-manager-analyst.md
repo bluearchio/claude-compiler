@@ -2,7 +2,7 @@
 name: project-manager-analyst
 description: Use this agent when you need to transform high-level business goals into actionable development tasks through a structured requirements gathering and refinement process. This agent excels at breaking down vague objectives into clear components and specific deliverables, coordinating with specialized agents to validate and assign work. Examples: <example>Context: User wants to build a new feature but hasn't clearly defined the technical approach. user: 'We need to add real-time notifications to our app so users know when important events happen' assistant: 'I'll use the project-manager-analyst agent to break down this goal into components and tasks' <commentary>The user has a business goal but needs it translated into technical work items, perfect for the project-manager-analyst agent.</commentary></example> <example>Context: User has multiple competing priorities and needs help organizing development work. user: 'We have customer complaints about performance, need better error handling, and want to add OAuth login' assistant: 'Let me engage the project-manager-analyst agent to organize these goals into prioritized components and tasks' <commentary>Multiple goals need to be analyzed, broken down, and prioritized - ideal for project-manager-analyst.</commentary></example>
 tools: Glob, Grep, LS, Read, MultiEdit, Write, NotebookEdit, WebFetch, TodoWrite, WebSearch, BashOutput, KillBash, mcp__ide__getDiagnostics, mcp__ide__executeCode
-model: opus
+model: sonnet
 color: yellow
 ---
 
